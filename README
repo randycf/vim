@@ -1,0 +1,15 @@
+http://lostjs.com/2012/02/04/use-pathogen-and-git-to-manage-vimfiles/
+
+= add vim plugin in git
+git submodule add 插件的Git仓库地址 bundle/插件名字
+
+= update plugin
+cd bundle/plugin_name
+git checkout master; git pull
+
+= update all plugin
+git submodule foreach 'git checkout master && git pull'
+
+= remove plugin
+rm -rf bundle/插件名
+git rm -r bundle/插件名
